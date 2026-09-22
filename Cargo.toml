@@ -1,0 +1,51 @@
+[package]
+name = "nexus-0"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+license = "MIT"
+authors = ["Mehmet T. AKALIN"]
+description = "Bare-metal, non-autoregressive AI decision engine and zero-dependency router"
+readme = "README.md"
+repository = "https://github.com/makalin/nexus-0"
+keywords = ["router", "inference", "ipc", "pii", "entropy"]
+categories = ["network-programming", "science"]
+publish = false
+
+[lib]
+name = "nexus0"
+path = "src/lib.rs"
+
+[[bin]]
+name = "nexus-0"
+path = "src/main.rs"
+
+[[example]]
+name = "client"
+path = "examples/client.rs"
+
+[[example]]
+name = "offline"
+path = "examples/offline.rs"
+
+[[example]]
+name = "extract"
+path = "examples/extract.rs"
+
+[[example]]
+name = "redact"
+path = "examples/redact.rs"
+
+[[example]]
+name = "kit"
+path = "examples/kit.rs"
+
+[[bench]]
+name = "latency"
+harness = false
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+strip = "symbols"
