@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="nexus_logo.png" alt="NEXUS-0" width="280">
+  <img src="nexus_logo.png" alt="NEXUS-0" width="100%">
 </p>
 
 # NEXUS-0
